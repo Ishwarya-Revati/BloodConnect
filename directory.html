@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital & Blood Bank Directory | BloodConnect</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="drop"></span> BloodConnect</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="donor.html">Donor Registration</a>
+        <a href="recipient.html">Recipient Registration</a>
+        <a href="requests.html">Blood Requests</a>
+        <a href="appointments.html">Appointment Booking</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack-lg" style="padding: 24px 0;">
+    <h1>Hospitals & Blood Banks</h1>
+
+    <div class="grid cols-3">
+      <div class="card stack-md">
+        <div>
+          <h3>City General Hospital</h3>
+          <div class="muted">123 Main Street, Mumbai</div>
+        </div>
+        <div><strong>Contact:</strong> +91 22 1234 5678</div>
+        <div class="hero-visual" style="padding:0; height: 220px;">
+          <iframe title="City General Hospital Map" width="100%" height="100%" style="border:0; border-radius: 12px;" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=City+General+Hospital+Mumbai&output=embed"></iframe>
+        </div>
+      </div>
+
+      <div class="card stack-md">
+        <div>
+          <h3>Mercy Blood Bank</h3>
+          <div class="muted">45 Park Avenue, Delhi</div>
+        </div>
+        <div><strong>Contact:</strong> +91 11 2345 6789</div>
+        <div class="hero-visual" style="padding:0; height: 220px;">
+          <iframe title="Mercy Blood Bank Map" width="100%" height="100%" style="border:0; border-radius: 12px;" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Blood+Bank+Delhi&output=embed"></iframe>
+        </div>
+      </div>
+
+      <div class="card stack-md">
+        <div>
+          <h3>Sunrise Hospital</h3>
+          <div class="muted">78 Lake Road, Bengaluru</div>
+        </div>
+        <div><strong>Contact:</strong> +91 80 3456 7890</div>
+        <div class="hero-visual" style="padding:0; height: 220px;">
+          <iframe title="Sunrise Hospital Map" width="100%" height="100%" style="border:0; border-radius: 12px;" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Sunrise+Hospital+Bengaluru&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> BloodConnect</div>
+      <div class="muted">Call ahead to confirm availability.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
+

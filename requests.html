@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Requests | BloodConnect</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="requests">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="drop"></span> BloodConnect</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="donor.html">Donor Registration</a>
+        <a href="recipient.html">Recipient Registration</a>
+        <a href="requests.html">Blood Requests</a>
+        <a href="appointments.html">Appointment Booking</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 24px 0;">
+    <section class="grid cols-2" style="align-items: start; gap: 20px;">
+      <div class="stack-lg">
+        <h1>Post a Blood Request</h1>
+        <form id="request-form" class="card">
+          <div class="grid cols-2">
+            <div class="field">
+              <label for="bloodType">Blood Type</label>
+              <select id="bloodType" name="bloodType" required>
+                <option value="">Select...</option>
+                <option>O-</option>
+                <option>O+</option>
+                <option>A-</option>
+                <option>A+</option>
+                <option>B-</option>
+                <option>B+</option>
+                <option>AB-</option>
+                <option>AB+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="urgency">Urgency</label>
+              <select id="urgency" name="urgency" required>
+                <option value="">Select...</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+                <option>Critical</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="location">Location</label>
+            <input id="location" name="location" placeholder="City, State" required />
+          </div>
+          <div id="request-errors" class="error"></div>
+          <div class="form-actions">
+            <button class="btn" type="submit">Post Request</button>
+            <button class="btn secondary" type="button" id="btn-my-matches">Show My Matches</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="stack-lg">
+        <div class="card stack-md">
+          <h2>Filter Requests</h2>
+          <div class="grid cols-2">
+            <div class="field">
+              <label for="filter-blood">Blood Type</label>
+              <select id="filter-blood">
+                <option value="">All</option>
+                <option>O-</option>
+                <option>O+</option>
+                <option>A-</option>
+                <option>A+</option>
+                <option>B-</option>
+                <option>B+</option>
+                <option>AB-</option>
+                <option>AB+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="filter-location">Location</label>
+              <input id="filter-location" placeholder="e.g. Mumbai" />
+            </div>
+          </div>
+        </div>
+        <div id="requests-list" class="grid cols-2"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> BloodConnect</div>
+      <div class="muted">Help requests find the right donors.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
+
