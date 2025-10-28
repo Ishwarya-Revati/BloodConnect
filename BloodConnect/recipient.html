@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipient Registration | BloodConnect</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="recipient">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="drop"></span> BloodConnect</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="donor.html">Donor Registration</a>
+        <a href="recipient.html">Recipient Registration</a>
+        <a href="requests.html">Blood Requests</a>
+        <a href="appointments.html">Appointment Booking</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack-lg" style="padding: 24px 0;">
+    <section class="stack-lg">
+      <div class="stack-md">
+        <h1>Recipient / Hospital Registration</h1>
+        <p class="muted">Register to request blood and connect with compatible donors.</p>
+      </div>
+
+      <form id="recipient-form" class="card">
+        <div class="grid cols-2">
+          <div class="field">
+            <label for="name">Name / Hospital</label>
+            <input id="name" name="name" placeholder="Jane Doe / Mercy Hospital" required />
+          </div>
+          <div class="field">
+            <label for="contact">Contact Number</label>
+            <input id="contact" name="contact" placeholder="+1 555 765 4321" required />
+          </div>
+        </div>
+        <div class="grid cols-2">
+          <div class="field">
+            <label for="location">Location / City</label>
+            <input id="location" name="location" placeholder="City, State" required />
+          </div>
+          <div class="field">
+            <label for="bloodType">Blood Type Needed</label>
+            <select id="bloodType" name="bloodType" required>
+              <option value="">Select...</option>
+              <option>O-</option>
+              <option>O+</option>
+              <option>A-</option>
+              <option>A+</option>
+              <option>B-</option>
+              <option>B+</option>
+              <option>AB-</option>
+              <option>AB+</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="details">Hospital / Case Details</label>
+          <textarea id="details" name="details" placeholder="Ward, doctor contact, case notes (optional)"></textarea>
+        </div>
+        <div id="recipient-errors" class="error"></div>
+        <div class="form-actions">
+          <button class="btn" type="submit">Save Recipient</button>
+          <a class="btn secondary" href="requests.html">Post a Request</a>
+        </div>
+      </form>
+    </section>
+
+    <section class="stack-lg">
+      <h2>Registered Recipients</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Blood Needed</th>
+              <th>Location</th>
+              <th>Contact</th>
+            </tr>
+          </thead>
+          <tbody id="recipient-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> BloodConnect</div>
+      <div class="muted">We are here to help.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
+

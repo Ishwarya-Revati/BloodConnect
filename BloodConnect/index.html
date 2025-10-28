@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloodConnect | Donate Blood. Save Lives.</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="description" content="Register as a blood donor or recipient, post requests, and book appointments." />
+</head>
+<body data-page="home">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="drop"></span> BloodConnect</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="donor.html">Donor Registration</a>
+        <a href="recipient.html">Recipient Registration</a>
+        <a href="requests.html">Blood Requests</a>
+        <a href="appointments.html">Appointment Booking</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Donate Blood. Share Life.</h1>
+          <p>Quickly register as a donor, find help when you need blood, and book appointments. Your contribution can save lives today.</p>
+          <div class="cta">
+            <a class="btn" href="donor.html">Become a Donor</a>
+            <a class="btn secondary" href="requests.html">Find Blood</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="pulse" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container stack-lg">
+        <h2>What you can do</h2>
+        <p class="muted">Fast, simple, and reliable features to help communities in need.</p>
+        <div class="grid cols-4">
+          <div class="card">
+            <h3>Quick Registration</h3>
+            <p>Register as a donor or recipient in under a minute with easy forms.</p>
+          </div>
+          <div class="card">
+            <h3>Find Donors</h3>
+            <p>Search for compatible blood donors by blood group and location.</p>
+          </div>
+          <div class="card">
+            <h3>Request Blood</h3>
+            <p>Post urgent requests and reach donors in your area instantly.</p>
+          </div>
+          <div class="card">
+            <h3>Book Appointments</h3>
+            <p>Schedule donation appointments with a clear date and time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> BloodConnect</div>
+      <div class="muted">Donate regularly. Inspire others.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+

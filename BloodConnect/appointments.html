@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appointment Booking | BloodConnect</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="appointments">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="drop"></span> BloodConnect</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="donor.html">Donor Registration</a>
+        <a href="recipient.html">Recipient Registration</a>
+        <a href="requests.html">Blood Requests</a>
+        <a href="appointments.html">Appointment Booking</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack-lg" style="padding: 24px 0;">
+    <section class="grid cols-2" style="align-items: start; gap: 20px;">
+      <form id="appointment-form" class="card stack-md">
+        <h1>Book an Appointment</h1>
+        <div class="field">
+          <label for="appointment-donor">Registered Donor</label>
+          <select id="appointment-donor" name="donorId" required></select>
+        </div>
+        <div class="grid cols-2">
+          <div class="field">
+            <label for="appointment-date">Date</label>
+            <input id="appointment-date" name="date" type="date" required />
+          </div>
+          <div class="field">
+            <label for="appointment-time">Time</label>
+            <input id="appointment-time" name="time" type="time" required />
+          </div>
+        </div>
+        <div id="appointment-errors" class="error"></div>
+        <div class="form-actions">
+          <button class="btn" type="submit">Book</button>
+          <a class="btn secondary" href="donor.html">Register as Donor</a>
+        </div>
+      </form>
+
+      <div class="stack-lg">
+        <div class="stack-md">
+          <h2>Scheduled Appointments</h2>
+          <p class="muted">Time window accepted: 08:00 - 18:00.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Donor</th>
+                <th>Blood Group</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody id="appointments-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> BloodConnect</div>
+      <div class="muted">Thank you for scheduling your donation.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
+
